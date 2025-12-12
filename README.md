@@ -1,5 +1,6 @@
 
 
+# 🎬
 # 🎬 SubPad Pro - Advanced Subtitle Editor
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,7 +10,7 @@
 
 **SubPad Pro** is a professional, web-based subtitle editor designed for speed, precision, and aesthetics. It bridges the gap between simple text editors and complex desktop subtitling software, offering a modern dark-mode interface, AI-powered translation capabilities, and batch processing tools.
 
-![SubPad Interface](https://via.placeholder.com/1200x600?text=SubPad+Pro+Dashboard+Preview)
+> **🔗 [View Live Preview & Demo](https://gemini.google.com/share/a7130f2ed84a)**
 
 ---
 
@@ -92,22 +93,52 @@
 
 ---
 
-## ☁️ Deployment
+## ☁️ Deployment Guide
 
 ### Option 1: Replit (Easiest)
-1. Fork this repo to your Replit account.
-2. The included `.replit` and `replit.nix` files will automatically configure the environment.
-3. Click **Run**.
+This project is pre-configured for Replit with `replit.nix`.
+
+1. **Log in** to your [Replit](https://replit.com/) account.
+2. Click **"+ Create Repl"** and select **"Import from GitHub"**.
+3. Paste your repository URL: `https://github.com/everarpitraj/subpad-pro.git`.
+4. Select the imported repository.
+5. Replit will detect the configuration. Once loaded, simply click the big green **Run** button at the top.
+6. Your app will be live at the provided Replit URL.
 
 ### Option 2: Heroku
-1. Create a new app on Heroku.
-2. Connect your GitHub repository.
-3. Deploy! Heroku will detect `Procfile` and use the built-in Express server (`server.js`) to serve the app.
+We include a `server.js` and `Procfile` to serve the static Vite build via Express.
 
-### Option 3: Vercel / Netlify
-Since this is a standard Vite app, you can deploy it as a static site:
-- **Build Command:** `npm run build`
-- **Output Directory:** `dist`
+**Steps:**
+
+1. **Install Heroku CLI:** Download and install from [heroku.com](https://devcenter.heroku.com/articles/heroku-cli).
+2. **Login:**
+   ```bash
+   heroku login
+   ```
+3. **Create App:**
+   ```bash
+   heroku create subpad-pro-app
+   ```
+4. **Deploy:**
+   ```bash
+   git push heroku master
+   ```
+   *(Or connect your GitHub repo to Heroku dashboard and enable auto-deploy).*
+
+5. **Open App:**
+   ```bash
+   heroku open
+   ```
+
+### Option 3: Netlify / Vercel (Static Hosting)
+Since SubPad Pro is a client-side React app, it works perfectly on static hosts.
+
+1. **Sign up/Login** to Vercel or Netlify.
+2. **Import Project** from GitHub.
+3. Use these build settings:
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Click **Deploy**.
 
 ---
 
