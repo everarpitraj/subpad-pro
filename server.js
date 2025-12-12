@@ -10,6 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Serve static files from the dist directory
+app.use('/subpad-pro', express.static(path.join(__dirname, 'dist')));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Handle React routing, return all requests to React app

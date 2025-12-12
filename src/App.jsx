@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Trash2, Upload, Download, Plus, Clock, RefreshCw, FileText, MonitorPlay, ChevronDown, Search, FileDown, CheckSquare, Square, Copy, Check, Loader2, Sparkles, Folder } from 'lucide-react';
-import { generateId, timeToMs, msToTime } from './utils/idUtils'; // Note: Adjust imports as needed if in same file or different modules
-import { timeToMs as convTimeToMs } from './utils/timeUtils'; // Renaming to avoid conflict if any, actually timeUtils has both
+import { generateId } from './utils/idUtils'; // Note: Adjust imports as needed if in same file or different modules
+import { timeToMs as convTimeToMs, msToTime } from './utils/timeUtils'; // Renaming to avoid conflict if any, actually timeUtils has both
 import { parseSRT, formatNotepadContent, baseNameFrom } from './utils/parserUtils';
 import { readFileAsText } from './utils/fileUtils';
 import { downloadSingleFile, downloadZipBundle } from './utils/downloadUtils';
